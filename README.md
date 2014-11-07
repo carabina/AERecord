@@ -1,12 +1,12 @@
 # AERecord
-**Super awesome CoreData wrapper written in Swift**
+**Super awesome Core Data wrapper for iOS written in Swift**
 
 
-Why do we need yet another one CoreData wrapper? You tell me!
+Why do we need yet another one Core Data wrapper? You tell me!
 
 >Inspired by many different (spoiler alert) magical solutions,
 I needed something which combines complexity and functionality just the way I want.
-All of that boilerplate for setting up of CoreData stack can be packed in 
+All of that boilerplate for setting up of Core Data stack can be packed in 
 one reusable and customizible line of code, and it should be.
 Passing the right `NSManagedObjectContext` all accross the project, 
 worrying about threads and stuff, shouldn't really be my concern in every single project.
@@ -26,22 +26,22 @@ Class | Description
 `AERecord` | main public class
 `AEStack` | private class which takes care of stack
 `NSManagedObject extension` | super easy data querying
-`CoreDataTableViewController` | CoreData driven UITableViewController
-`CoreDataCollectionViewController` | CoreData driven UICollectionViewController
+`CoreDataTableViewController` | Core Data driven UITableViewController
+`CoreDataCollectionViewController` | Core Data driven UICollectionViewController
 
 
 ## Features
-- Create default or custom CoreData stack easily accessible from everywhere
+- Create default or custom Core Data stack easily accessible from everywhere
 - Have main and background contexts, always in sync, but don't worry about it
 - Create, delete or fetch data in many ways with one liners
-- Connect UI (tableView or collectionView) with CoreData, and just manage the data
+- Connect UI (tableView or collectionView) with Core Data, and just manage the data
 - That's all folks (for now)
 
 
 ## Index
 - [Examples](#examples)
   - [About AERecordExample project](#about-aerecordexample-project)
-  - [Create CoreData stack](#create-coredata-stack)
+  - [Create Core Data stack](#create-core-data-stack)
   - [Manage contexts](#manage-contexts)
   - [Easy querying](#easy-querying)
   	- [Creating](#creating)
@@ -49,8 +49,8 @@ Class | Description
   	- [Finding first](#finding-first)
   	- [Finding all](#finding-all)
   	- [Custom fetch requests](#custom-fetch-requests)
-  - [Use CoreData with tableView](#use-coredata-with-tableview)
-  - [Use CoreData with collectionView](#use-coredata-with-collectionview)
+  - [Use Core Data with tableView](#use-core-data-with-tableview)
+  - [Use Core Data with collectionView](#use-core-data-with-collectionview)
 - [API](#api)
   - [AERecord](#aerecord-class)
   - [NSManagedObject extension](#nsmanagedobject-extension)
@@ -64,12 +64,12 @@ Class | Description
 ## Examples
 
 ### About AERecordExample project
-This project is made of default Master-Detail Application template with CoreData enabled,
-but modified to show off some of the `AERecord` features such as creating of CoreData stack,
+This project is made of default Master-Detail Application template with Core Data enabled,
+but modified to show off some of the `AERecord` features such as creating of Core Data stack,
 using data driven tableView and collectionView, along with few simple querying.  
 I mean, just compare it with the default template and think about that.
 
-### Create CoreData stack
+### Create Core Data stack
 Almost everything in `AERecord` is made with optional parameters (which have defaults if you don't specify anything).
 So you can create CoreData stack like this:
 
@@ -167,7 +167,7 @@ let request = ...
 NSManagedObject.executeFetchRequest(request) // execute any request and get array of objects
 ```
 
-### Use CoreData with tableView
+### Use Core Data with tableView
 `CoreDataTableViewController` mostly just copies the code from `NSFetchedResultsController`
 documentation page into a subclass of UITableViewController.
 
@@ -209,7 +209,7 @@ class MyTableViewController: CoreDataTableViewController {
 }
 ```
 
-### Use CoreData with collectionView
+### Use Core Data with collectionView
 Same as with the tableView.
 
 
