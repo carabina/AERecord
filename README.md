@@ -10,12 +10,12 @@ All of that boilerplate for setting up of CoreData stack can be packed in
 one reusable and customizible line of code, and it should be.
 Passing the right `NSManagedObjectContext` all accross the project, 
 worrying about threads and stuff, shouldn't really be my concern in every single project.
-And what about that similar `NSFetchRequest` boilerplates for querying or creating of data? Boring!
+And what about that similar `NSFetchRequest` code chunks for querying or creating of data? Boring!
 Finally when it comes to connecting your data with the tableView, 
 we know that the best approach is to use `NSFetchedResultsController`,
-but `CoreDataTableViewController` wrapper from [Stanford's CS193p](http://www.stanford.edu/class/cs193p/cgi-bin/drupal/downloads-2013-winter) is the best thing ever,
-I don't know why everybody doesn't use that everywhere.
-I liked it so much that I made `CoreDataCollectionViewController` in the same fashion.  
+but `CoreDataTableViewController` from [Stanford's CS193p](http://www.stanford.edu/class/cs193p/cgi-bin/drupal/downloads-2013-winter) is the best thing ever,
+and should be used everywhere.
+I liked it so much that I made `CoreDataCollectionViewController` in the same fashion.
 So, `AERecord` should solve all of these for me, I hope you will like it too.
 
 
@@ -70,8 +70,7 @@ using data driven tableView and collectionView, along with few simple querying.
 I mean, just compare it with the default template and think about that.
 
 ### Create CoreData stack
-Almost everything in `AERecord` is made with optional parameters (not like Swift optionals, 
-but like parameters which have defaults if you don't specify anything).
+Almost everything in `AERecord` is made with optional parameters (which have defaults if you don't specify anything).
 So you can create CoreData stack like this:
 
 ```swift
